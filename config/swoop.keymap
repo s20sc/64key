@@ -23,33 +23,14 @@
 
 / {
         behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp TAB>;
-        };
-    };  
-
-         behaviors {
-       as: auto_shift {
-        compatible = "zmk,behavior-hold-tap";
-        label = "AUTO_SHIFT";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-                };             
-modcp: mod_copy {
-        compatible = "zmk,behavior-mod-morph";
-        label = "MOD_COPY";
-        #binding-cells = <0>;
-        bindings = <&as LS(C) C>, <&kp C>;
-        mods = <(LGUI | RGUI)>;
-};
-        };
+            td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_0";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp ESC>, <&kp TAB>;
+            };
+        };  
 
 
     macros {
@@ -83,13 +64,6 @@ modcp: mod_copy {
        
     };
     
-     combos {
-        compatible = "zmk,combos";
-         combo_LSHFT {
-            timeout-ms = <50>;
-            key-positions = <14 15>;
-            bindings = <&kp  LSHFT>;
-        };
    };
 
 
@@ -103,7 +77,7 @@ modcp: mod_copy {
                 &lt 2 TAB &kp Q    &kp W     &kp E   &kp R   &kp T           &kp Y       &kp U     &kp I     &kp O    &kp P    &lt 2 EQUAL
                 &kp ESC   &kp A    &kp S     &kp D   &kp F   &kp G           &kp H       &kp J     &kp K     &kp L    &kp SEMI &kp SQT
                 &kp LSHFT &kp Z    &kp X     &kp C   &kp V   &kp B           &kp N       &kp M     &kp COMMA &kp DOT  &kp FSLH &kp BSLH  
-                &kp CAPS  &kp DEL  &kp BSPC  &lt 1 SPACE                     &lt 1 SPACE &kp ENTER &kp LBKT  &kp RBKT          
+                &kp CAPS  &kp INS  &kp DEL  &lt 1 SPACE                     &lt 1 ENTER &kp BSPC &kp LBKT  &kp RBKT          
                 &kp LALT  &none	   &kp LCTRL &kp LGUI 	                     &kp RGUI    &kp RCTRL &none     &kp RALT
 
             >;
@@ -113,8 +87,8 @@ modcp: mod_copy {
             bindings = <
                 &kp F1   &kp F2 &kp F3      &kp F4    &kp F5       &kp F6          &none  &none     &kp KP_SLASH &kp KP_MULTIPLY   &kp KP_MINUS &none
                 &kp F7   &kp F8 &kp F9      &kp F10   &kp F11      &kp F12         &none  &kp KP_N7 &kp KP_N8    &kp KP_N9         &kp KP_PLUS  &none 
-                &trans   &none  &none       &kp UP    &none        &none           &none  &kp KP_N4 &kp KP_N5    &kp KP_N6         &none        &none
-                &trans   &none  &kp LEFT    &kp DOWN  &kp RIGHT    &none           &none  &kp KP_N1 &kp KP_N2    &kp KP_N3         &none        &none 
+                &trans   &none  &none       &kp UP    &none        &none           &kp PG_UP  &kp KP_N4 &kp KP_N5    &kp KP_N6         &kp KP_PLUS  &none
+                &trans   &none  &kp LEFT    &kp DOWN  &kp RIGHT    &none           &kp PG_DN  &kp KP_N1 &kp KP_N2    &kp KP_N3         &none        &none 
                 &trans   &trans &trans      &trans                                 &trans &trans	&kp KP_N0    &kp KP_DOT	
                 &trans   &none  &trans      &trans                                 &trans &trans    &none        &trans     	
 
