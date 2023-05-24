@@ -91,7 +91,7 @@
                 &lt 2 TAB AS(Q)    AS(W)     AS(E)   AS(R)   AS(T)           AS(Y)       AS(U)     AS(I)     AS(O)    AS(P)    AS(EQUAL)
                 &kp ESC   AS(A)    AS(S)     AS(D)   AS(F)   AS(G)           AS(H)       AS(J)     AS(K)     AS(L)    AS(SEMI) AS(SQT)
                 &kp LSHFT AS(Z)    AS(X)     AS(C)   AS(V)   AS(B)           AS(N)       AS(M)     AS(COMMA) AS(DOT)  AS(FSLH) AS(BSLH)  
-                &kp INS  &kp DEL  &kp LSHFT  &lt 1 SPACE                      &lt 1 ENTER &kp BSPC  AS(LBKT)  AS(RBKT)          
+                &kp CAPS  &kp INS  &kp DEL  &lt 1 SPACE                      &lt 1 ENTER &kp BSPC  AS(LBKT)  AS(RBKT)          
                 &kp LALT  &none	   &kp LCTRL &kp LGUI 	                     &kp RGUI    &kp RCTRL &none     &kp RALT
 
             >;
